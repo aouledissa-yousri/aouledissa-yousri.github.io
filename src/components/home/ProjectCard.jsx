@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
-import axios from "axios";
 
 const ProjectCard = ({ value }) => {
   const {
@@ -10,7 +9,7 @@ const ProjectCard = ({ value }) => {
     description,
     svn_url,
     stargazers_count,
-    languages_url,
+    tools,
     pushed_at,
   } = value;
   return (
@@ -21,8 +20,8 @@ const ProjectCard = ({ value }) => {
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
           {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
-          {languages_url ? (
-            <Language languages_url={languages_url} repo_url={svn_url} />
+          {tools ? (
+            <Tools tools={tools} />
           ) : (
             <Skeleton count={3} />
           )}
@@ -53,10 +52,11 @@ const CardButtons = ({ svn_url }) => {
   );
 };
 
-const Language = ({ languages_url, repo_url }) => {
-  const [data, setData] = useState([]);
+const Tools = ({ tools }) => {
+  console.log(tools)
+  //const [data, setData] = useState([]);
 
-  const handleRequest = useCallback(async () => {
+  /*const handleRequest = useCallback(async () => {
     try {
       const response = await axios.get(languages_url);
       return setData(response.data);
@@ -67,35 +67,32 @@ const Language = ({ languages_url, repo_url }) => {
 
   useEffect(() => {
     handleRequest();
-  }, [handleRequest]);
+  }, [handleRequest]);*/
 
-  const array = [];
-  let total_count = 0;
-  for (let index in data) {
-    array.push(index);
-    total_count += data[index];
-  }
+  const [array, setArray] = useState(tools)
+
+  console.log(array)
 
   return (
     <div className="pb-3">
-      Languages:{" "}
+      Tools:{" "}
       {array.length
+
         ? array.map((language) => (
-          <a
+          <span
             key={language}
             className="card-link"
-            href={repo_url + `/search?l=${language}`}
             target=" _blank"
             rel="noopener noreferrer"
           >
             <span className="badge bg-light text-dark">
-              {language}:{" "}
-              {Math.trunc((data[language] / total_count) * 1000) / 10} %
+              {language}
             </span>
-          </a>
+          </span>
 
-        ))
-        : "code yet to be deployed."}
+        )) : "N/A"
+      
+      }
     </div>
   );
 };
@@ -142,3 +139,24 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
 };
 
 export default ProjectCard;
+
+
+
+/*
+{array.length
+        ? array.map((language) => (
+          <a
+            key={language}
+            className="card-link"
+            href={repo_url + `/search?l=${language}`}
+            target=" _blank"
+            rel="noopener noreferrer"
+          >
+            <span className="badge bg-light text-dark">
+              {language}:{" "}
+              {Math.trunc((data[language] / total_count) * 1000) / 10} %
+            </span>
+          </a>
+
+        ))
+        : "English."}*/

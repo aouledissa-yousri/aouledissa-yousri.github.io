@@ -1,16 +1,23 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
-import SkillsBar from "./SkillsBar";
+//import SkillsBar from "./SkillsBar";
+import SkillIcon from "./SkillsIcon";
 
 function SkillsSection({ skills, isScrolled }) {
   return (
     <>
       {skills.map((skill, index) => (
-        <SkillsBar
+        /*<SkillsBar
           key={`${skill}-${index}`}
           skill={skill.name}
           value={skill.value}
           isScrolled={isScrolled}
+        />*/
+
+        <SkillIcon
+          key={`${skill}-${index}`}
+          skill={skill.name}
+          logoUrl={skill.logo}
         />
       ))}
     </>

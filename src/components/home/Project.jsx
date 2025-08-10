@@ -4,27 +4,29 @@ import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import ProjectCard from "./ProjectCard";
 import axios from "axios";
+import { repos } from "../../editable-stuff/config";
 
 const dummyProject = {
-  name: null,
+  name: "S",
   description: null,
   svn_url: null,
   stargazers_count: null,
   languages_url: null,
   pushed_at: null,
 };
+
 const API = "https://api.github.com";
 // const gitHubQuery = "/repos?sort=updated&direction=desc";
 // const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
 
 const Project = ({ heading, username, length, specfic }) => {
-  const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
+  const allReposAPI = `${API}/users/${username}/orgs`;
   const specficReposAPI = `${API}/repos/${username}`;
   const dummyProjectsArr = new Array(length + specfic.length).fill(
     dummyProject
   );
 
-  const [projectsArray, setProjectsArray] = useState([]);
+  const [projectsArray, setProjectsArray] = useState(repos.specificRepos);
 
   const fetchRepos = useCallback(async () => {
     let repoList = [];
@@ -51,7 +53,7 @@ const Project = ({ heading, username, length, specfic }) => {
   }, [allReposAPI, length, specfic, specficReposAPI]);
 
   useEffect(() => {
-    fetchRepos();
+    //fetchRepos();
   }, [fetchRepos]);
 
   return (

@@ -48,7 +48,7 @@ const about = {
     `I’m a software engineer specializing in blockchain development, full-stack web, and mobile applications. Through internships at Datarox and Tabhotel Digital, I gained practical experience building React-based NFT marketplaces, cross-platform Ionic apps, and Flutter applications.
      I hold a Bachelor’s degree in Information Technology and am currently pursuing further studies in Computer Science and Multimedia Engineering. My skill set includes a variety of programming languages, frameworks, and tools that I apply to deliver efficient, scalable solutions.
      Focused on applying technical skills to solve real-world problems and delivering impactful projects in dynamic development environments.`,
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: "https://drive.google.com/file/d/1gMBb69x7dLszNy6Z1tT8Hex4q6qWCAqs/view",
 };
 
 // PROJECTS SECTION

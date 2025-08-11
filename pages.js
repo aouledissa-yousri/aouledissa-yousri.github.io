@@ -1,11 +1,12 @@
 const ghpages = require("gh-pages");
 const pathname = `${__dirname}/build`;
-const repoURL = "https://github.com/hashirshoaeb/hashirshoaeb.github.io.git";
+const repoURL = "https://github.com/aouledissa-yousri/aouledissa-yousri.github.io.git";
+
 
 ghpages.publish(
   pathname,
   {
-    branch: "master",
+    branch: "deploy",
     repo: repoURL,
   },
   (err) => {

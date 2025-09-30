@@ -48,7 +48,7 @@ const about = {
     `I’m a software engineer specializing in blockchain development, full-stack web, and mobile applications. Through internships at Datarox and Tabhotel Digital, I gained practical experience building React-based NFT marketplaces, cross-platform Ionic apps, and Flutter applications.
      I hold a Bachelor’s degree in Information Technology and am currently pursuing further studies in Computer Science and Multimedia Engineering. My skill set includes a variety of programming languages, frameworks, and tools that I apply to deliver efficient, scalable solutions.
      Focused on applying technical skills to solve real-world problems and delivering impactful projects in dynamic development environments.`,
-  resume: "https://drive.google.com/file/d/1gMBb69x7dLszNy6Z1tT8Hex4q6qWCAqs/view",
+  resume: "https://drive.google.com/file/d/1WAq9lW5nqkplT2fbvg7aPxz3bFBhnNXF/view",
 };
 
 // PROJECTS SECTION
@@ -126,20 +126,20 @@ const leadership = {
   message:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/hashirshoaeb.png"),
+      label: "First slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
-    { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+    {
+      img: require("../editable-stuff/hashirshoaeb.png"),
+      label: "Second slide label",
+      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum."
     },
   ],
   imageSize: {
-    width:"615",
-    height:"450"
+    width: "615",
+    height: "450"
   }
 };
 
@@ -147,10 +147,10 @@ const leadership = {
 const skills = {
   show: true,
   heading: "Skills",
-  
+
   programmingLanguages: [
     { name: "Python", value: 90, logo: require("../editable-stuff/logos/programming-languages/python.png") },
-    { name: "PHP", value: 75, logo: require("../editable-stuff/logos/programming-languages/php.png")},
+    { name: "PHP", value: 75, logo: require("../editable-stuff/logos/programming-languages/php.png") },
     { name: "Java", value: 85, logo: require("../editable-stuff/logos/programming-languages/java.png") },
     { name: "C", value: 65, logo: require("../editable-stuff/logos/programming-languages/c.png") },
     { name: "C++", value: 65, logo: require("../editable-stuff/logos/programming-languages/cpp.png") },
@@ -223,7 +223,7 @@ const skills = {
     { name: "Unity", value: 90, logo: require("../editable-stuff/logos/game-dev/unity.png") },
   ],
 
- 
+
 };
 
 // GET IN TOUCH SECTION
@@ -258,7 +258,7 @@ const experiences = {
 
 
     {
-      role: 'Front-End Developer',
+      role: 'System Developer',
       companylogo: require('../editable-stuff/logos/companies/telecom.png'),
       date: 'June 2021 – July 2021',
     },

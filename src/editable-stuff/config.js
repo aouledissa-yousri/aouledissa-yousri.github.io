@@ -45,10 +45,10 @@ const about = {
   imageLink: require("../editable-stuff/yousri-aouledissa.jpeg"),
   imageSize: 375,
   message:
-    `I’m a software engineer specializing in blockchain development, full-stack web, and mobile applications. Through internships at Datarox and Tabhotel Digital, I gained practical experience building React-based NFT marketplaces, cross-platform Ionic apps, and Flutter applications.
-     I hold a Bachelor’s degree in Information Technology and am currently pursuing further studies in Computer Science and Multimedia Engineering. My skill set includes a variety of programming languages, frameworks, and tools that I apply to deliver efficient, scalable solutions.
+    `I’m a software engineer specializing in Web3, full-stack web, and mobile development. Most recently, during my final-year engineering internship at Defendr.gg, I designed and shipped the production rewards system of an esports platform (NestJS, Next.js, MongoDB, RabbitMQ), deployed smart contracts across Ethereum, Rootstock, Hedera and Solana, and integrated NFT minting, multi-wallet support and Stripe payments. Earlier internships at IT-Youb Consulting, Datarox and Tabhotel Digital gave me hands-on experience building Flutter fitness apps, React-based NFT marketplaces and cross-platform Ionic applications.
+     I hold an Engineering degree in Computer Science and Multimedia from ISAMM and a Bachelor’s degree in Information Technology. My skill set spans a wide range of programming languages, frameworks, and tools that I apply to deliver efficient, scalable solutions.
      Focused on applying technical skills to solve real-world problems and delivering impactful projects in dynamic development environments.`,
-  resume: "https://drive.google.com/file/d/1HdbtwFtJHe69Lkxn7rouqDq8OTRryefe/view",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -183,6 +183,10 @@ const skills = {
     { name: "IPFS", value: 65, logo: require("../editable-stuff/logos/web3/ipfs.png") },
     { name: "Ethereum", value: 90, logo: require("../editable-stuff/logos/web3/ethereum.png") },
     { name: "Laika", value: 85, logo: require("../editable-stuff/logos/web3/laika.png") },
+    { name: "Solana", value: 80, logo: require("../editable-stuff/logos/web3/solana.png") },
+    { name: "Anchor", value: 75, logo: require("../editable-stuff/logos/web3/anchor.png") },
+    { name: "Hedera", value: 75, logo: require("../editable-stuff/logos/web3/hedera.png") },
+    { name: "Rootstock", value: 75, logo: require("../editable-stuff/logos/web3/rootstock.png") },
   ],
 
   mobile: [
@@ -203,6 +207,9 @@ const skills = {
     { name: "SoapUI", value: 80, logo: require("../editable-stuff/logos/dev-tools/soap-ui.png") },
     { name: "PyCharm", value: 85, logo: require("../editable-stuff/logos/dev-tools/pycharm.png") },
     { name: "Burp Suite", value: 85, logo: require("../editable-stuff/logos/dev-tools/burp.png") },
+    { name: "GitHub Actions", value: 80, logo: require("../editable-stuff/logos/dev-tools/github-actions.png") },
+    { name: "RabbitMQ", value: 75, logo: require("../editable-stuff/logos/dev-tools/rabbitmq.png") },
+    { name: "Jest", value: 80, logo: require("../editable-stuff/logos/dev-tools/jest.png") },
   ],
 
 
@@ -240,9 +247,14 @@ const experiences = {
   heading: "Experience",
   data: [
     {
+      role: 'Web3 Software Engineer',
+      companylogo: require('../editable-stuff/logos/companies/defendr.png'),
+      date: 'Feb 2026 – Aug 2026',
+    },
+    {
       role: 'Software Engineer',// Here Add Company Name
       companylogo: require('../editable-stuff/logos/companies/it-youb.png'),
-      date: 'June 2024 – Present',
+      date: 'June 2024 – Aug 2025',
     },
     {
       role: 'Blockchain Developer',
@@ -275,7 +287,7 @@ const education = {
     {
       degree: "Engineering Degree (Master's Degree) in Computer Science and Multimedia",
       instituteLogo: require('../editable-stuff/logos/institutes/isamm.png'),
-      date: 'September 2023 – Present',
+      date: 'September 2023 – September 2026',
     },
     {
       degree: "Bachelor's Degree in Information Technology",

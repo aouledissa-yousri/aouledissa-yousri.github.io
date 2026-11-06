@@ -8,9 +8,8 @@ const ProjectCard = ({ value }) => {
     name,
     description,
     svn_url,
-    stargazers_count,
+    links,
     tools,
-    pushed_at,
   } = value;
   return (
     <Col md={6}>
@@ -18,17 +17,20 @@ const ProjectCard = ({ value }) => {
         <Card.Body>
           <Card.Title as="h5">{name || <Skeleton />} </Card.Title>
           <Card.Text>{(!description) ? "" : description || <Skeleton count={3} />} </Card.Text>
-          {svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
+          {links ? (
+            <div className="d-grid gap-2 d-md-block">
+              {links.map((l) => (
+                <a key={l.url} href={l.url} target="_blank" rel="noreferrer noopener" className="btn btn-outline-secondary mx-2">
+                  <i className="fab fa-github" /> {l.label}
+                </a>
+              ))}
+            </div>
+          ) : svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
           <hr />
           {tools ? (
             <Tools tools={tools} />
           ) : (
             <Skeleton count={3} />
-          )}
-          {value ? (
-            <CardFooter star_count={stargazers_count} repo_url={svn_url} pushed_at={pushed_at} />
-          ) : (
-            <Skeleton />
           )}
         </Card.Body>
       </Card>

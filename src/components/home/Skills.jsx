@@ -15,9 +15,10 @@ const Skills = React.forwardRef(({
   web3, 
   mobile, 
   databases,
-  devTools, 
-  modeling, 
-  gameDev 
+  devTools,
+  ai,
+  modeling,
+  gameDev
 }, ref) => {
 
 
@@ -107,6 +108,16 @@ const Skills = React.forwardRef(({
 
           <Tab
             tabClassName="skills-tab lead"
+            eventKey="ai-agentic"
+            title="AI & Agentic Dev"
+          >
+            <Row className="pt-3 px-1">
+              <SkillsTab skills={ai} isScrolled={isScrolled} />
+            </Row>
+          </Tab>
+
+          <Tab
+            tabClassName="skills-tab lead"
             eventKey="3d-modeling"
             title="3D Modeling"
           >
@@ -114,7 +125,6 @@ const Skills = React.forwardRef(({
               <SkillsTab skills={modeling} isScrolled={isScrolled} />
             </Row>
           </Tab>
-
 
           <Tab
             tabClassName="skills-tab lead"

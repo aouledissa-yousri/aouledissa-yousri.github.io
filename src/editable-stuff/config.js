@@ -10,7 +10,7 @@ const mainBody = {
   firstName: "Yousri",
   middleName: "",
   lastName: "Aouledissa",
-  message: " Software engineer focused on driving transformative technological innovation.",
+  message: " Backend & full-stack engineer building Web3, mobile and AI-powered software.",
   icons: [
     {
       image: "fa-github",
@@ -45,7 +45,7 @@ const about = {
   imageLink: require("../editable-stuff/yousri-aouledissa.jpeg"),
   imageSize: 375,
   message:
-    `I’m a software engineer specializing in Web3, full-stack web, and mobile development. Most recently, during my final-year engineering internship at Defendr.gg, I designed and shipped the production rewards system of an esports platform (NestJS, Next.js, MongoDB, RabbitMQ), deployed smart contracts across Ethereum, Rootstock, Hedera and Solana, and integrated NFT minting, multi-wallet support and Stripe payments. Earlier internships at IT-Youb Consulting, Datarox and Tabhotel Digital gave me hands-on experience building Flutter fitness apps, React-based NFT marketplaces and cross-platform Ionic applications.
+    `I’m a software engineer specializing in Web3, full-stack web, and mobile development. Most recently, during my final-year engineering internship at Defendr.gg, I designed and shipped the rewards system of an esports platform (NestJS, Next.js, MongoDB, RabbitMQ), deployed smart contracts across Ethereum, Rootstock, Hedera and Solana, and integrated NFT minting, multi-wallet support and Stripe payments. Earlier internships at IT-Youb Consulting, Datarox and Tabhotel Digital gave me hands-on experience building Flutter fitness apps, React-based NFT marketplaces and cross-platform Ionic applications.
      I hold an Engineering degree in Computer Science and Multimedia from ISAMM and a Bachelor’s degree in Information Technology. My skill set spans a wide range of programming languages, frameworks, and tools that I apply to deliver efficient, scalable solutions.
      Focused on applying technical skills to solve real-world problems and delivering impactful projects in dynamic development environments.`,
   resume: require("../editable-stuff/resume.pdf"),
@@ -78,7 +78,10 @@ const repos = {
       name: "Wyrmx",
       description: "Wyrmx is a blazing-fast, opinionated Python web framework built atop FastAPI, inspired by modular architectures like NestJS. It streamlines development with type safety, intuitive decorators, dependency injection, and intelligent automation all while maintaining performance and flexibility.",
       svn_url: "https://github.com/Wyrmx/Wyrmx-CLI",
-      stargazers_count: 1,
+      links: [
+        { label: "Wyrmx Core", url: "https://github.com/Wyrmx/Wyrmx-Core" },
+        { label: "Wyrmx CLI", url: "https://github.com/Wyrmx/Wyrmx-CLI" },
+      ],
       languages_url: "https://api.github.com/repos/Wyrmx/Wyrmx-CLI/languages",
       tools: ["Python", "Pytest", "FastAPI", "Alembic", "Poetry"],
       pushed_at: "2025-07-29T12:00:00Z",
@@ -105,16 +108,6 @@ const repos = {
       tools: ["Ionic", "Django", "Tauri", "PostgreSQL"],
       pushed_at: "2022-10-16T12:00:00Z",
     },
-
-    {
-      name: "Best Tunisia Travel",
-      description: "Developed a comprehensive travel agency platform consisting of a public website that allows foreign tourists to explore and book organized trips to popular Tunisian destinations, alongside a desktop back-office application enabling administrators to efficiently manage trip offers. Successfully completed development and deployment one week ahead of schedule, ensuring timely delivery and client satisfaction.",
-      svn_url: "https://github.com/aouledissa-yousri/BestTunisiaTravel",
-      stargazers_count: 1,
-      languages_url: "",
-      tools: ["Angular", "Firebase", "Electron"],
-      pushed_at: "2021-11-05T12:00:00Z",
-    }
 
   ],
 };
@@ -161,6 +154,17 @@ const skills = {
     { name: "Typescript", value: 55, logo: require("../editable-stuff/logos/programming-languages/ts.png") },
     { name: "Bash", value: 80, logo: require("../editable-stuff/logos/programming-languages/bash.png") },
     { name: "Solidity", value: 85, logo: require("../editable-stuff/logos/programming-languages/sol.png") },
+    { name: "Rust", value: 60, logo: require("../editable-stuff/logos/programming-languages/rust.svg").default },
+  ],
+
+  ai: [
+    { name: "Claude Code", value: 85, logo: require("../editable-stuff/logos/ai/claudecode.svg").default },
+    { name: "OpenCode", value: 80, logo: require("../editable-stuff/logos/ai/opencode.svg").default },
+    { name: "Google Antigravity", value: 70, logo: require("../editable-stuff/logos/ai/antigravity.svg").default },
+    { name: "OpenAI Codex", value: 70, logo: require("../editable-stuff/logos/ai/codex.svg").default },
+    { name: "Claude API", value: 75, logo: require("../editable-stuff/logos/ai/claude-color.svg").default },
+    { name: "MCP", value: 70, logo: require("../editable-stuff/logos/ai/mcp.svg").default },
+    { name: "Agent Guardrails & Coding Standards", value: 80, logo: require("../editable-stuff/logos/ai/guardrails.svg").default },
   ],
 
   web: [
@@ -247,30 +251,60 @@ const experiences = {
   heading: "Experience",
   data: [
     {
-      role: 'Web3 Software Engineer',
+      role: 'Web3 Software Engineer (Final-year project)',
+      company: 'Defendr.gg',
       companylogo: require('../editable-stuff/logos/companies/defendr.png'),
       date: 'Feb 2026 – Aug 2026',
+      points: [
+        'Built the rewards system of an esports platform: players earn five types of tournament prizes, achievements, trophies, medals and organisation badges, attributed automatically when a tournament ends, with real-time notifications.',
+        'Let players own their rewards as NFTs minted to their own wallet on four chains (Ethereum, Rootstock, Hedera, Solana), and convert red coins, blue coins, crypto and cash between them (Stripe).',
+        'Gave organisers and admins the tools to create and distribute rewards, with KPI dashboards and AI-assisted reward creation.',
+      ],
     },
     {
-      role: 'Software Engineer',// Here Add Company Name
+      role: 'Software Engineer (Internships)',
+      company: 'IT-Youb Consulting',
+      points: [
+        'Built a cross-platform fitness app in Flutter with interactive exercise videos and 3D animations.',
+        'Integrated a NestJS API (users, categories, Firebase video streaming) and designed the navigation and search UI.',
+        'Produced interactive 3D workout videos for 100 exercises (Blender, After Effects) delivered through Firebase.',
+        'Developed the NestJS API for video and metadata management, with Python automation of the pipeline.',
+      ],
       companylogo: require('../editable-stuff/logos/companies/it-youb.png'),
       date: 'June 2024 – Aug 2025',
     },
     {
-      role: 'Blockchain Developer',
+      role: 'Blockchain Developer (Final-year project)',
+      company: 'Datarox',
+      points: [
+        'Built an NFT marketplace in React for a 10,000-NFT collection, synchronized with OpenSea.',
+        'Integrated MetaMask for secure interaction with the Ethereum smart contracts (Solidity, Truffle).',
+        'Built an admin dashboard for live monitoring of NFT sales and properties.',
+      ],
       companylogo: require('../editable-stuff/logos/companies/datarox.png'),
       date: 'Feb 2023 – June 2023',
     },
 
     {
-      role: 'Software Engineer',
+      role: 'Mobile Developer (Internship)',
+      company: 'Tabhotel Digital',
+      points: [
+        'Developed a cross-platform Ionic app (iOS/Android) for booking personalized celebrity video messages.',
+        'Integrated the Django backend and Stripe payments for the booking flow.',
+      ],
       companylogo: require('../editable-stuff/logos/companies/tabhotel.png'),
       date: 'Jan 2022 – Feb 2022',
     },
 
 
     {
-      role: 'System Developer',
+      role: 'System Developer (Internship)',
+      company: 'Tunisie Telecom',
+      points: [
+        'Migrated 100 enterprise machines from Windows to Ubuntu using Bash scripts, with minimal disruption and stable systems throughout.',
+        'Worked with the IT team to resolve technical issues and documented the whole migration process for future reference.',
+        'Improved the organization\'s security, stability and cost-efficiency by moving to Ubuntu.',
+      ],
       companylogo: require('../editable-stuff/logos/companies/telecom.png'),
       date: 'June 2021 – July 2021',
     },
@@ -287,7 +321,7 @@ const education = {
     {
       degree: "Engineering Degree (Master's Degree) in Computer Science and Multimedia",
       instituteLogo: require('../editable-stuff/logos/institutes/isamm.png'),
-      date: 'September 2023 – September 2026',
+      date: 'September 2023 – October 2026',
     },
     {
       degree: "Bachelor's Degree in Information Technology",

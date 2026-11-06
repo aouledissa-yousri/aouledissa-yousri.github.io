@@ -12,8 +12,14 @@ const ExperienceCard = ({ data }) => {
         <p className="lead">
           {data.role}
           <br />
+          {data.company && (<><strong>{data.company}</strong><br /></>)}
           {data.date}
         </p>
+        {data.points && (
+          <ul className="text-start mx-auto" style={{ maxWidth: "30rem" }}>
+            {data.points.map((p, i) => (<li key={i}>{p}</li>))}
+          </ul>
+        )}
 
       </div>
     </Col>

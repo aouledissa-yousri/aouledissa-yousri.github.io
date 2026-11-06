@@ -55,6 +55,17 @@ code {
 .brand {
   color: #363636 !important;
 }
+.navbar-transparent .navbar-brand {
+  color: #ffffff !important;
+}
+.navbar .nav-link,
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+.navbar-white .nav-link,
+.navbar-white .nav-link:hover {
+  color: #1f2933 !important;
+}
 .nav-item {
   transition: color, 0.2s;
 }

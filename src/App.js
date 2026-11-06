@@ -82,6 +82,7 @@ const Home = React.forwardRef((props, ref) => {
           mobile={skills.mobile}
           databases={skills.databases}
           devTools={skills.devTools}
+          ai={skills.ai}
           modeling={skills.modeling}
           gameDev={skills.gameDev}
         />
